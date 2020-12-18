@@ -19,4 +19,4 @@ def yolo():
         if i % 3 == 0 and i % 5 != 0:
             num_list.append(i)
     print("100以内能被3整除但是不能被5整除的数:%s" % num_list)
-    
+
