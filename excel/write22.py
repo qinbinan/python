@@ -1,11 +1,11 @@
 # -*-coding:UTF-8 -*-
 from xlwt.Workbook import Workbook
-wb = Workbook('utf-8')
-sheet = wb.add_sheet('test')
-sheet.write(2, 2, 'test')
-wb.save(r'd:/test.xls')
 from xlwt.Formatting import Alignment
 from xlwt.Style import XFStyle
+# wb = Workbook('utf-8')
+# sheet = wb.add_sheet('test')
+# sheet.write(2, 2, 'test')
+# wb.save(r'd:/test.xls')
 
 wb = Workbook('utf-8')
 sheet = wb.add_sheet('test2')
@@ -38,6 +38,8 @@ for i in range(len(content)):
         sheet.write(1 + i, 0 + j, content[i][j], content_style)
  
 wb.save(r'd:/test2.xls')
+
+
 from xlrd import open_workbook
 from xlutils.copy import copy
 ori_excel = open_workbook(r'd:/test2.xls', formatting_info=True)
