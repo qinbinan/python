@@ -30,7 +30,7 @@ for i in range(len(content)):
     for j in range(len(content[i])):
         sheet.write(1 + i, 0 + j, content[i][j], content_style)
 
-cursor.close
-connection.close
+cursor.close()
+connection.close()
 
 wb.save(r'd:/学生表.xls')
