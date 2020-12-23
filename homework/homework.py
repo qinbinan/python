@@ -144,47 +144,58 @@
 #         else:
 #             print('猜对了')
 #             break
+from random import choice
+def game():
+    lists = ['石头', '剪刀', '布']
+    computer_choice=choice(lists)
+    my_choice=input('输入：')
+    print(computer_choice)
+    print(my_choice)
+    if my_choice==computer_choice:
+        print('平')
+    elif (my_choice=='布' and computer_choice=='石头')or()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
 
