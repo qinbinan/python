@@ -5,9 +5,8 @@ from pymysql import connect
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
 
-
-cn=connect('192.168.1.4','root','root','ecshop',3306)
-cursor=cn.cursor()
+cn = connect('192.168.1.4', 'root', 'root', 'ecshop', 3306)
+cursor = cn.cursor()
 cursor.execute("delete from ecs_goods where goods_name='iphone'")
 cn.commit()
 
@@ -28,9 +27,9 @@ driver.find_element_by_xpath('//*[@id="tabbody-div"]/form/div/input[2]').click()
 sleep(3)
 
 cursor.execute("select goods_name from ecs_goods where goods_name='iphone'")
-result=cursor.fetchone()
+result = cursor.fetchone()
 
-if result[0]=='iphone':
+if result[0] == 'iphone':
     print('添加新商品成功')
 else:
     print('添加商品失败')
