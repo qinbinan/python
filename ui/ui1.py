@@ -1,36 +1,32 @@
 # -*-coding:UTF-8 -*-
-from selenium import webdriver
-from time import sleep
-from pymysql import connect
 
+from pymysql import connect
+from selenium import webdriver
+
+cn = connect('192.168.1.4', 'root', 'root', 'ecshop', 3306)
+cursor = cn.cursor()
+cursor.execute("select is_on_sale from ecs_goods where goods_name='iphone'")
+result=cursor.fetchone()
+ 
 driver = webdriver.Chrome('../drivers/chromedriver.exe')
-driver.get('http://192.168.1.4/ecshop/admin/privilege.php?act=login')
+driver.get('http://192.168.1.4/ecshop/admin')
 driver.maximize_window()
 driver.find_element_by_name('username').send_keys('caichang')
 driver.find_element_by_name('password').send_keys('caichang1')
-driver.find_element_by_class_name('btn-a').click()
+driver.find_element_by_xpath('//*[@id="loginPanel"]/div[3]/input').click()
 driver.switch_to.frame('menu-frame')
 driver.find_element_by_link_text('商品列表').click()
 driver.switch_to.default_content()
 driver.switch_to.frame('main-frame')
-driver.find_element_by_name('keyword').send_keys('车')
-driver.find_element_by_xpath("//input[@value=' 搜索 ']").click()
-sleep(1)
-webname = driver.find_element_by_xpath('//*[@id="listDiv"]/table[1]/tbody/tr[3]/td[2]/span').text
+driver.find_element_by_xpath('//*[@id="listDiv"]/table[1]/tbody/tr[13]/td[5]/img').click()
 
+cursor.execute("select is_on_sale from ecs_goods where goods_name='iphone'")
+result2=cursor.fetchone()
 
-conne = connect(host='192.168.1.4', user='root', password="root", database='ecshop', port=3306)
-cursor = conne.cursor()
-cursor.execute("select goods_name from ecs_goods where goods_name like '%车%'")
-result = cursor.fetchall()
-print(result)
-
-
-
-
-
-
-
+if result[0]!=result2[0] and result2[0]==0:
+    print('下架成功')
+else:
+    print('上架成功')
 
 
 
