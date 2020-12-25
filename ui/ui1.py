@@ -1,7 +1,7 @@
 # -*-coding:UTF-8 -*-
-
 from pymysql import connect
 from selenium import webdriver
+from time import sleep
 
 cn = connect('192.168.1.4', 'root', 'root', 'ecshop', 3306)
 cursor = cn.cursor()
@@ -19,7 +19,7 @@ driver.find_element_by_link_text('商品列表').click()
 driver.switch_to.default_content()
 driver.switch_to.frame('main-frame')
 driver.find_element_by_xpath('//*[@id="listDiv"]/table[1]/tbody/tr[13]/td[5]/img').click()
-
+sleep(2)
 cursor.execute("select is_on_sale from ecs_goods where goods_name='iphone'")
 result2=cursor.fetchone()
 

@@ -243,9 +243,12 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>测试报告.html</h1>
-    <p>Report generated on 25-Dec-2020 at 09:18:26 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 25-Dec-2020 at 17:28:51 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
+      <tr>
+        <td>JAVA_HOME</td>
+        <td>E:\soft\jsp\jdk</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "0.13.1", "py": "1.10.0", "pytest": "6.2.1"}</td></tr>
@@ -259,8 +262,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.5</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 14.44 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>1 tests ran in 9.96 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">0 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -271,12 +274,12 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
           <th class="sortable links" col="links">Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
-      <tbody class="passed results-table-row">
+      <tbody class="failed results-table-row">
         <tr>
-          <td class="col-result">Passed</td>
-          <td class="col-name">python_unit/test_demo.py::TestGoods::test_search</td>
-          <td class="col-duration">14.31</td>
+          <td class="col-result">Failed</td>
+          <td class="col-name">testcase/TestGoods.py::TestGoods::test_add</td>
+          <td class="col-duration">9.58</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="empty log">No log output captured.</div></td></tr></tbody></table></body></html>
+            <div class="log">self = &lt;testcase.TestGoods.TestGoods object at 0x00000000041D8E08&gt;<br/><br/>    def test_add(self):<br/>    <br/>        self.get_cursor().execute(&quot;delete from ecs_goods where goods_name=&#x27;iphone&#x27;&quot;)<br/>        self.get_connect().commit()<br/>        driver=self.login()<br/>        driver.switch_to.frame(&#x27;menu-frame&#x27;)<br/>        driver.find_element_by_link_text(&#x27;添加新商品&#x27;).click()<br/>        driver.switch_to.default_content()<br/>        driver.switch_to.frame(&#x27;main-frame&#x27;)<br/>        driver.find_element_by_name(&#x27;goods_name&#x27;).send_keys(&#x27;iphone&#x27;)<br/>        Select(driver.find_element_by_name(&#x27;cat_id&#x27;)).select_by_visible_text(&#x27;    小型手机&#x27;)<br/>        driver.find_element_by_xpath(&#x27;//*[@id=&quot;tabbody-div&quot;]/form/div/input[2]&#x27;).click()<br/>    <br/>        sleep(2)<br/>    <br/>        cursor=self.get_cursor()<br/>        cursor.execute(&quot;select goods_name from ecs_goods where goods_name=&#x27;iphone&#x27;&quot;)<br/>&gt;       result = self.get_cursor().fetchone()<br/><br/>testcase\TestGoods.py:46: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/>..\..\python3\lib\site-packages\pymysql\cursors.py:275: in fetchone<br/>    self._check_executed()<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _<br/><br/>self = &lt;pymysql.cursors.Cursor object at 0x0000000004208E48&gt;<br/><br/>    def _check_executed(self):<br/>        if not self._executed:<br/>&gt;           raise err.ProgrammingError(&quot;execute() first&quot;)<br/><span class="error">E           pymysql.err.ProgrammingError: execute() first</span><br/><br/>..\..\python3\lib\site-packages\pymysql\cursors.py:74: ProgrammingError<br/></div></td></tr></tbody></table></body></html>
