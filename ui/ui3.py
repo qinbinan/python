@@ -1,6 +1,5 @@
 # -*-coding:UTF-8 -*-
 from time import sleep
-
 from pymysql import connect
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
