@@ -1,7 +1,6 @@
 # -*-coding:UTF-8 -*-
 from selenium import webdriver
 from time import sleep
-from xlutils.copy import copy
 from xlrd import open_workbook
 
 
@@ -36,8 +35,7 @@ for i in range(len(black_list)):
     driver.find_element_by_xpath("//div[@class='er']//a[@title='%s']//../preceding-sibling::div[1]"  % black_list[i]).click()
 
 driver.close()
-    
-    
+
 
 
 
