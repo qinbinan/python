@@ -7,7 +7,7 @@ from selenium.webdriver.support.select import Select
 cn = connect('192.168.1.4', 'root', 'root', 'ecshop', 3306)
 cursor = cn.cursor()
 cursor.execute("delete from ecs_goods where goods_name='iphone'")
-cn.commit()
+
 
 driver = webdriver.Chrome('../drivers/chromedriver.exe')
 driver.get('http://192.168.1.4/ecshop/admin/privilege.php?act=login')
@@ -34,4 +34,5 @@ else:
     print('添加商品失败')
 cursor.close()
 cn.close()
+
 

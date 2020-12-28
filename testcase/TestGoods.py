@@ -3,12 +3,20 @@ from time import sleep
 from pymysql import connect
 from selenium import webdriver
 from selenium.webdriver.support.select import Select
+from utils.Logger import Logger
+from selenium.common.exceptions import NoSuchElementException
+
+logger = Logger('TestGoods').getlog()
+
 
 class TestGoods():
+    
     def login(self):
+        url='http://192.168.1.4/ecshop/admin'
         driver = webdriver.Chrome()
-        driver.get('http://192.168.1.4/ecshop/admin/privilege.php?act=login')
+        driver.get(url)
         driver.maximize_window()
+        logger.info('最大化了浏览器')
         driver.find_element_by_name('username').send_keys('caichang')
         driver.find_element_by_name('password').send_keys('caichang1')
         driver.find_element_by_class_name('btn-a').click()    
@@ -19,7 +27,7 @@ class TestGoods():
         return cn
     
     def get_cursor(self):
-        cursor=self.get_connect().cursor()
+        cursor = self.get_connect().cursor()
         return cursor
     
     def closeall(self):
@@ -29,8 +37,7 @@ class TestGoods():
     def test_add(self):
             
         self.get_cursor().execute("delete from ecs_goods where goods_name='iphone'")
-        self.get_connect().commit()
-        driver=self.login()
+        driver = self.login()
         driver.switch_to.frame('menu-frame')
         driver.find_element_by_link_text('添加新商品').click()
         driver.switch_to.default_content()
@@ -40,19 +47,25 @@ class TestGoods():
         driver.find_element_by_xpath('//*[@id="tabbody-div"]/form/div/input[2]').click()
          
         sleep(2)
-        
-        cursor=self.get_cursor()
-        cursor.execute("select goods_name from ecs_goods where goods_name='iphone'")
-        result = self.get_cursor().fetchone()
-        
-        
-        assert result[0] == 'iphone'
+    
+        try: 
+            
+            cursor = self.get_cursor()
+            cursor.execute("select goods_name from ecs_goods where goods_name='iphone'")
+            result = cursor.fetchone()
+            assert result[0] == 'iphone'
+        except NoSuchElementException:
+            print('对不起，没有数据')
+        finally:
+            self.closeall()
+            driver.quit()
+
+
+
 #         if result[0] == 'iphone':
 #             print('添加新商品成功')
 #         else:
 #             print('添加商品失败')
         
-        self.closeall()
-        driver.close()
-
+        
 
