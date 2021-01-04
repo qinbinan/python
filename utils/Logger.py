@@ -15,7 +15,7 @@ class Logger(object):
         
         
         times = time.strftime('%Y-%m-%d')
-        log_path=os.path.dirname(os.path.abspath('.'))+r'\\logs\\'
+        log_path=os.path.dirname(os.path.abspath('.'))+r'\\python_study\\logs\\'
         
         log_name=log_path+times+'.log'
         

@@ -5,7 +5,7 @@ from xlrd import open_workbook
 
 
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome('../drivers/chromedriver.exe')
 driver.get('https://login.51job.com/login.php')
 driver.maximize_window()
 driver.find_element_by_id('loginname').send_keys('15920413866')
@@ -34,7 +34,6 @@ black_list=sheet.col_values(0,1)
 for i in range(len(black_list)):
     driver.find_element_by_xpath("//div[@class='er']//a[@title='%s']//../preceding-sibling::div[1]"  % black_list[i]).click()
 
-driver.close()
 
 
 
