@@ -15,11 +15,16 @@ class TestEdc():
     cookie_id = config.getall_option(file_path, 'Cookies')[0].upper()
     cookie_value = config.get_value(file_path, 'Cookies', 'JSESSIONID')
     
+    '''
+            配置IP地址以及端口
+    '''
     ip = config.getall_option(file_path, 'Env')[0]
     ip_value = config.get_value(file_path, 'Env', 'ip')
     port = config.getall_option(file_path, 'Env')[1]
     port_value = config.get_value(file_path, 'Env', 'port')
-    
+    '''
+            配置申请头
+    '''
     content_type=config.getall_option(file_path,'Headers')[0]
     content_type_value=config.get_value(file_path,'Headers','Content-Type')
        
@@ -55,7 +60,7 @@ class TestEdc():
     def test_asi(self):
         url = '%s:%s/recruit.students/school/manage/addSchoolInfo' % (self.env['ip'], self.env['port'])
         data = {
-            'schoolName':'实验中学2',
+            'schoolName':'实验中学3',
             'listSchoolType[0].id':'3',
             'canRecruit':'1',
             'remark':'chong'

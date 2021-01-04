@@ -243,7 +243,7 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>测试报告.html</h1>
-    <p>Report generated on 04-Jan-2021 at 18:59:03 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 04-Jan-2021 at 20:22:44 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -262,8 +262,8 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.7.5</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 0.16 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>7 tests ran in 0.38 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">7 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -277,12 +277,79 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">interface/login2.py::TestEdc::test_login</td>
-          <td class="col-duration">0.04</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_login</td>
+          <td class="col-duration">0.09</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 18:59:03 TestEdc [INFO] ulr地址为：http://192.168.1.5:8080/recruit.students/login/in
-2021-01-04 18:59:03 TestEdc [INFO] 状态码为200
-<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     TestEdc:login2.py:12 ulr地址为：http://192.168.1.5:8080/recruit.students/login/in
-INFO     TestEdc:login2.py:21 状态码为200<br/></div></td></tr></tbody></table></body></html>
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_asi</td>
+          <td class="col-duration">0.03</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 20:22:43 Config [INFO] 对不起，你的DynamicId已存在
+2021-01-04 20:22:43 Config [INFO] 恭喜你，成功创建：DynamicId下的屬性f_id中的4667
+2021-01-04 20:22:43 Config [INFO] 恭喜你，成功创建：DynamicId下的屬性l_id中的379046
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     Config:Config.py:31 对不起，你的DynamicId已存在
+INFO     Config:Config.py:66 恭喜你，成功创建：DynamicId下的屬性f_id中的4667
+INFO     Config:Config.py:66 恭喜你，成功创建：DynamicId下的屬性l_id中的379046<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_ssr</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 20:22:43 Config [INFO] 你的value值为：4667
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     Config:Config.py:90 你的value值为：4667<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_set</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 20:22:43 Config [INFO] 你的value值为：4667
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     Config:Config.py:90 你的value值为：4667<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_rp</td>
+          <td class="col-duration">0.02</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 20:22:43 Config [INFO] 你的value值为：4667
+2021-01-04 20:22:43 Config [INFO] 你的value值为：379046
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     Config:Config.py:90 你的value值为：4667
+INFO     Config:Config.py:90 你的value值为：379046<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_es</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 20:22:44 Config [INFO] 你的value值为：4667
+2021-01-04 20:22:44 Config [INFO] 你的value值为：379046
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     Config:Config.py:90 你的value值为：4667
+INFO     Config:Config.py:90 你的value值为：379046<br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">interface/version2.py::TestEdc::test_ds</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log"> ------------------------------Captured stderr call------------------------------ <br/>2021-01-04 20:22:44 Config [INFO] 你的value值为：4667
+2021-01-04 20:22:44 Config [INFO] 你的value值为：379046
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     Config:Config.py:90 你的value值为：4667
+INFO     Config:Config.py:90 你的value值为：379046<br/></div></td></tr></tbody></table></body></html>
