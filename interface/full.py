@@ -36,7 +36,7 @@ class TestEdc:
     
     '''
 
-    def test_ASI(self):
+    def test_asi(self):
         url = '%s:%s/recruit.students/school/manage/addSchoolInfo' % (self.env['ip'], self.env['port'])
         data = {
             'schoolName':'实验中学',
@@ -52,7 +52,7 @@ class TestEdc:
     
     '''
 
-    def test_SSR(self):
+    def test_ssr(self):
         url = '%s:%s/recruit.students/school/manage/setStudentRecruitTime' % (self.env['ip'], self.env['port'])
         json = [{"id":"4610", "recruitStartTime":"2021-01-05", "recruitEndTime":"2021-01-07", "isStudentRecruitTime":"1"}]
         response = post(url, None, json=json, cookies=self.cookies, headers=self.headers)
@@ -63,7 +63,7 @@ class TestEdc:
     
     '''
 
-    def test_SET(self):
+    def test_set(self):
         url = '%s:%s/recruit.students/school/manage/setEnrollmentTime' % (self.env['ip'], self.env['port'])
         json = [{"id":"4610", "startTime":"2020-12-28", "endTime":"2020-12-31", "isSelfEnrollmentTime":"1"}]
         response = post(url, None, json=json, cookies=self.cookies, headers=self.headers)
@@ -74,7 +74,7 @@ class TestEdc:
     
     '''
 
-    def test_RP(self):
+    def test_rp(self):
         url = '%s:%s/recruit.students/school/manage/resetPassword' % (self.env['ip'], self.env['port'])
         json = [{"id":"475413", "schoolId":"4610"}]
         response = post(url, None, json=json, cookies=self.cookies, headers=self.headers)
@@ -85,7 +85,7 @@ class TestEdc:
     
     '''
 
-    def test_ES(self):
+    def test_es(self):
         url = '%s:%s/recruit.students/school/manage/enableOrDisableSchool' % (self.env['ip'], self.env['port'])
         json = [{"id":"475413", "disable":1, "schoolId":"4610"}]
         response = post(url, None, json=json, cookies=self.cookies, headers=self.headers)
@@ -96,7 +96,7 @@ class TestEdc:
     
     '''    
 
-    def test_DS(self):
+    def test_ds(self):
         url = '%s:%s/recruit.students/school/manage/enableOrDisableSchool' % (self.env['ip'], self.env['port'])
         json = [{"id":"475413", "disable":0, "schoolId":"4610"}]
         response = post(url, None, json=json, cookies=self.cookies, headers=self.headers)
