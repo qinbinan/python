@@ -9,6 +9,7 @@ class TestEdc():
      
     file_path = os.path.dirname(os.path.abspath('.')) + '\\qbn\\conf\\config.ini'
     config = Config(file_path)
+    
     '''
             配置cookie文件
     '''
@@ -22,6 +23,7 @@ class TestEdc():
     ip_value = config.get_value(file_path, 'Env', 'ip')
     port = config.getall_option(file_path, 'Env')[1]
     port_value = config.get_value(file_path, 'Env', 'port')
+    
     '''
             配置申请头
     '''
