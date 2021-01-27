@@ -7,7 +7,7 @@ from utils.Config import Config
 
 class TestEdc():
      
-    file_path = os.path.dirname(os.path.abspath('.')) + '\\qbn\\conf\\config.ini'
+    file_path = os.path.dirname(os.path.abspath('.')) + '\\demo\\conf\\config.ini'
     config = Config(file_path)
     
     '''
